@@ -1,31 +1,27 @@
-cat > .github/workflows/main.yml << EOF
-
 name: Hello World Workflow
 
 on:
-	push:
-	branches:
-		-main
-	workflow_dispatch
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  	hello:
-    	runs-on: ubuntu-latest
-
-    	steps:
-      	uses: actions/checkout@v2
-	name: HEllo World
-	run:	echo "Hello World from git actions project"
-	shell: bash
-
-        goodbye:
-        runs-on: ubuntu-latest
-
-        steps:
-        uses: actions/checkout@v2
-        name: Goodbye World
-        run:    echo "Goodbye World from git actions project"
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello World
+        run: echo "Hello World from git actions project"
         shell: bash
 
-    - name: Thanks to Teacher
-      run: echo " Thank you Mr. Parkash Sarangani from Bilawal Kumbhar"
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Goodbye World
+        run: echo "Goodbye World from git actions project"
+        shell: bash
+      - name: Thanks to Teacher
+        run: echo "Thank you Mr. Parkash Sarangani from Bilawal Kumbhar"
+
