@@ -28,4 +28,4 @@ jobs:
         shell: bash
 
     - name: Thanks to Teacher
-      run: echo " Thank you Mr. Parkash Sarangani "
+      run: echo " Thank you Mr. Parkash Sarangani from Bilawal Kumbhar"
